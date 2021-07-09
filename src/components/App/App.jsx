@@ -2,9 +2,8 @@ import { useEffect,useState } from 'react';
 import { ChatProvider } from 'context';
 import 'semantic-ui-css/semantic.min.css';
 import { useAuth, useResolved } from 'hooks';
-import { Login, Signup, Chat } from 'components';
+import { Login, Signup, Chat, VideoChat} from 'components';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import VideoCallPage from 'components/VideoCallPage/VideoCallPage';
 import FileUpload from 'components/FileUpload/FileUpload';
 
 
@@ -45,7 +44,7 @@ export const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/fileupload" component={FileUpload} />
-          <Route path="/:id" component={VideoCallPage} />
+          <Route path="/:id" component={VideoChat} />
           
 
         </Switch>

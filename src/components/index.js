@@ -15,3 +15,4 @@ export * from './ImageUpload';
 export * from './VideoCallPage';
 export * from './FileUpload';
 export * from './SwitchingRail';
+export * from './VideoChat';

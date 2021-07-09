@@ -13,7 +13,6 @@ code {
 }
 .app {
   width: 100vw;
-  color: white;
   height: 100vh;
   display: flex;
   overflow: hidden;
@@ -296,7 +295,7 @@ code {
   display: flex;
   cursor: pointer;
   align-items: center;
-  padding-bottom: 5px;
+  padding: 10px;
 }
 .no-messages-yet {
   font-size: 24px;
@@ -602,4 +601,10 @@ code {
   height: auto;
 }
 
+.jitsi-component {
+  display : block;
+}
 
+.custom-meet-icon {
+  padding : 50px;
+}
