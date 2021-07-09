@@ -133,6 +133,8 @@ const   FileUpload=()=> {
             
             <p className ="file-date">{file.date ?file.date.substr(0,10):file.date}</p>
           </div>
+
+          
         
           );
         })}
