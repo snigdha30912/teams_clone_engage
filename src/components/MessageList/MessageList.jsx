@@ -1,5 +1,5 @@
 import { useChat } from 'context';
-import { ChatAvatar } from 'components';
+import { TeamAvatar } from 'components';
 import { groupMessages } from 'helpers';
 import { useScrollToBottom } from 'hooks';
 import { Icon } from 'semantic-ui-react';
@@ -24,7 +24,7 @@ export const MessageList = () => {
             m[0].sender.username === chatConfig.userName ? 'me' : 'her'
           }`}>
             <div className="chat-message-header">
-              <ChatAvatar
+              <TeamAvatar
                 className="message-avatar"
                 username={m[0].sender.username}
                 chat={selectedChat}

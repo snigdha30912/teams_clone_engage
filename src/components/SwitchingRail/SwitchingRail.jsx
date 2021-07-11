@@ -1,26 +1,15 @@
+//making imports
 import { useChat } from 'context';
-import { useResolved } from 'hooks';
-import { ChatList } from 'components';
-import { RailHeader } from 'components';
-import { Loader } from 'semantic-ui-react';
 import { Icon } from 'semantic-ui-react';
-import shortid from 'shortid';
 
+
+//functional component SideBar
 export const SwitchingRail = () => {
-  const { myChats, createChatClick, isFileUpload,setIsFileUpload,setIsChatScreen, } = useChat();
-  const chatsResolved = useResolved(myChats);
-
-  const startCall = () => {
-    // generate unique i
-    const uid = shortid.generate();
-    // redirect to the call page.
-    // history.push(`/${uid}`);
-    const win = window.open(`/${uid}`, "_blank");
-    win.focus();
-  }
+  const {setIsFileUpload,setIsChatScreen} = useChat();
 
   return (
     <div className="switch-rail">
+            {/* on clicking on the chat icon  chat window opens */}
             <div onClick={() => {
             setIsChatScreen(true);
             setIsFileUpload(false);
@@ -28,7 +17,7 @@ export const SwitchingRail = () => {
             }} className="chat-screen-show">
             <Icon name="chat" color="black" size="big"/>
           </div>
-
+        {/* on clicking on the folder icon the upload folder window opens. */}
           <div onClick={() => {
             setIsFileUpload(true);
             setIsChatScreen(false);
@@ -36,9 +25,6 @@ export const SwitchingRail = () => {
           }} className="chat-screen-show">
             <Icon name="folder open" color="black" size="big"/>
           </div>
-          <div onClick={startCall} className="chat-screen-show">
-          <Icon name="video" color="black" size="big"/>
-        </div>
     </div>
   );
 };

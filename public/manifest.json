@@ -1,6 +1,6 @@
 {
-  "short_name": "PortEXE Chat Tutorial",
-  "name": "Building a complete chat application with React and Chatengine.io",
+  "short_name": "Microsoft Teams Clone - Engage 2021",
+  "name": "Building a complete chat application with React and Chatengine.io and video conferencing feature using JITSI meet",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
