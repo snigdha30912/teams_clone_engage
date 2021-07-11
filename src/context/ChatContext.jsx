@@ -54,17 +54,31 @@ export const ChatProvider = ({ children, authUser }) => {
   // authUser has initialized.
   useEffect(() => {
     if (authUser) {
+      // fb.firestore
+      //   .collection('chatUsers')
+      //   .doc(authUser.uid)
+      //   .onSnapshot(snap => {
+      //     setChatConfig({
+      //       userSecret: authUser.uid,
+      //       avatar: snap.data().avatar,
+      //       userName: snap.data().userName,
+      //       projectID: 'fd035b12-b645-437c-afe9-f204d6d8eda0',
+      //     });
+      //   });
       fb.firestore
         .collection('chatUsers')
         .doc(authUser.uid)
-        .onSnapshot(snap => {
+        .get()
+        .then((doc)=>{
+          if(doc.exists)
           setChatConfig({
             userSecret: authUser.uid,
-            avatar: snap.data().avatar,
-            userName: snap.data().userName,
+            avatar: doc.data()["avatar"]!=""?doc.data()["avatar"]:null,
+            userName: doc.data()["userName"],
             projectID: 'fd035b12-b645-437c-afe9-f204d6d8eda0',
           });
-        });
+        })
+      
     }
   }, [authUser, setChatConfig]);
 

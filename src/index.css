@@ -169,6 +169,7 @@ code {
   cursor: pointer;
   border-radius: 50%;
   background-color: #ffc5cd;
+  
 }
 .preview-message {
   font-size: 12px;
@@ -284,6 +285,11 @@ code {
   align-items: center;
   background-color: #aec6cf;
   justify-content: space-between;
+}
+
+.chat-list-container {
+  overflow-y: auto;
+  height: calc(100% - 150px);
 }
 .chat-header-text {
   color: black;

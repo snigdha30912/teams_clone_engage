@@ -103,17 +103,18 @@ setChatConfig(doc.data());
           }}
         />
       )}
-
+        <VideoCallPage/>
       <div className="chat-container">
-        
+      
         <div className="current-chat">
+        
           {chatConfig && selectedChat ?( 
             <div className="chat">
               <MessageList/>
               <ChatInput/>
             </div>
           ):(<></>)}
-          <VideoCallPage/>
+          
         </div>
       </div>
     </>

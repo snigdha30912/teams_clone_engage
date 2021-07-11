@@ -41,7 +41,7 @@ class JitsiComponent extends Component {
             },
             parentNode: document.querySelector('#jitsi-iframe'),
             userInfo: {
-                displayName: this.state.user.name
+                displayName: "Team Member"
             }
         }
         this.api = new window.JitsiMeetExternalAPI(this.domain, options);
@@ -136,7 +136,7 @@ class JitsiComponent extends Component {
             <div id="jitsi-iframe" className="jitsi-frame"></div>
             <br />
             <br />
-            
+
             
             <div style={{"position":"relative"}}>
                 <span className="jitsi-custom">&nbsp;&nbsp;</span>
