@@ -36,7 +36,7 @@ class JitsiComponent extends Component {
             },
             parentNode: document.querySelector('#jitsi-iframe'),
             userInfo: {
-                displayName: "Me"
+                displayName: "User"
             }
         }
         this.api = new window.JitsiMeetExternalAPI(this.domain, options);
