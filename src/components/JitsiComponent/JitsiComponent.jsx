@@ -25,7 +25,6 @@ class JitsiComponent extends Component {
     }
     
     startMeet = () => {
-    
         const options = {
             roomName: this.state.room,
             width: '100%',
