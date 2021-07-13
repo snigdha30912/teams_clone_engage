@@ -1,4 +1,7 @@
 
+link to the website is in the youtube video description.
+
+
 AIM - The aim is to create a Microsoft teams clone. The mandatory functionality to be established is 1:1 video conversation between to different people.  After including the mandatory functionality other functionalities can be implemented.
 
 APPROACH – 
