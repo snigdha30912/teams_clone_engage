@@ -42,6 +42,7 @@ setChatConfig(doc.data());
 
   return (
     <>
+    
       {!!chatConfig && ( //using react chat engine
         <ChatEngine
           hideUI={true}
